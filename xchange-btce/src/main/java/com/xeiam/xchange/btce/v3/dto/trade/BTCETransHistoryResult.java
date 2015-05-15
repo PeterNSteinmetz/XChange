@@ -17,7 +17,7 @@ public class BTCETransHistoryResult {
   private final String currency;
   private final String description;
   private final Status status;
-  private final Long timestamp;
+  private final Long timestamp;   // seconds since the standard UNIX epoch
 
 
   /**
@@ -76,13 +76,13 @@ public class BTCETransHistoryResult {
    * Type of transaction.
    */
   public static enum Type {
-    reserved0, BTC_deposit, BTC_withdrawal, reserved3, credit, payment, reserved6, reserved7, reserved8
+    reserved0, deposit, withdrawal, reserved3, credit, payment, reserved6, reserved7, reserved8
   }
 
   /**
    * Status of transaction.
    */
   public static enum Status {
-    entered, waiting, complete
+    cancelled, waiting, complete
   }
 }
