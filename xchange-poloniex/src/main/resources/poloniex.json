@@ -1,6 +1,20 @@
 {
-   "currency_pairs":[
-      "BTC/XUSD"
-   ],
-   "max_public_poll_rate_per_minute":180
+  "currencyPair": {
+    "BTC/USD": {
+      "priceScale": 8,
+      "tradingFee": 0.002
+    }
+  },
+  "currency": {
+    "BTC": {
+      "scale": 8
+    }
+  },
+  "privateRateLimits": [
+    {
+      "calls": 180,
+      "timeUnit": "minutes"
+    }
+  ],
+  "shareRateLimits": true
 }
