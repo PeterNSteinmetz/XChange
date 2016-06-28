@@ -26,6 +26,7 @@ public class BTCETradeServiceRaw extends BTCEBasePollingService {
 
   private static final String MSG_NO_TRADES = "no trades";
   private static final String MSG_BAD_STATUS = "bad status";
+  private static final String MSG_NO_TRANSACTIONS = "no transactions";
 
   /**
    * Constructor
@@ -124,7 +125,7 @@ public class BTCETradeServiceRaw extends BTCEBasePollingService {
         order, since, end);
     String error = btceTransHistory.getError();
     // BTC-e returns this error if it finds no trades matching the criteria
-    if (MSG_NO_TRADES.equals(error)) {
+    if (MSG_NO_TRANSACTIONS.equals(error)) {
       return Collections.emptyMap();
     }
 
